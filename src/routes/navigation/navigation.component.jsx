@@ -1,5 +1,5 @@
 import { Fragment, useContext } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 import { useSelector } from "react-redux";
 import { selectCurrentUser } from "../../store/user/user.selector";

@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { createContext, useState, useEffect } from "react";
 import SHOP_DATA from "../shop-data";
-import { getCollectionAndDocuments } from "../utils/firebase/firebase.utils";
+import { getCategoriesAndDocuments } from "../utils/firebase/firebase.utils";
 
 export const CategoriesContext = createContext({
   categoriesMap: [],
@@ -12,7 +12,7 @@ export const CategoriesProvider = ({ children }) => {
 
   useEffect(() => {
     const getCategories = async () => {
-      const categoriesMap = await getCollectionAndDocuments(
+      const categoriesMap = await getCategoriesAndDocuments(
         "categories",
         SHOP_DATA
       );

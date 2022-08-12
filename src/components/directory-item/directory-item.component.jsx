@@ -9,8 +9,6 @@ import {
 const DirectoryItem = ({ category }) => {
   const { imageUrl, title, route } = category;
   const navigate = useNavigate();
-
-  debugger;
   const onNavigateHandler = () => navigate(route);
 
   return (
