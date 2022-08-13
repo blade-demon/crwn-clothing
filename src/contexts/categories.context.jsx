@@ -18,7 +18,6 @@ export const CategoriesProvider = ({ children }) => {
       );
 
       setCategories(categoriesMap);
-      console.log(categoriesMap);
     };
     getCategories();
   }, []);
