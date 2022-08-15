@@ -5,15 +5,16 @@ import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
 import { rootReducer } from "./root-reducer";
+import thunkMiddleware from "redux-thunk";
 
 const persisitConfig = {
   key: "root",
   storage,
-  blacklist: ["user"],
+  blacklist: ["cart"],
 };
 const persistedReducer = persistReducer(persisitConfig, rootReducer);
 
-const middlewares = [logger];
+const middlewares = [thunkMiddleware, logger];
 
 const composeEnhancers = compose(applyMiddleware(...middlewares));
 
